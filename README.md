@@ -20,3 +20,4 @@ https://github.com/sajeelmalik/Portfolio-React
 - Material UI - powerful design framework based on Google's Material Design principles
 - React Reveal - animations
 - React Scroll To Component - scrolling functionality
+- Markdown React JS - thorough *.md* parsing and conversion to HTML
