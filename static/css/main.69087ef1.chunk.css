@@ -12,6 +12,7 @@ code {
 #about {
   width: 100%;
   margin-bottom: 40px;
+  z-index: 3;
 }
 .about-me {
   display: flex;
@@ -101,6 +102,7 @@ code {
 .about-me-body {
   margin: auto;
   width: 60%;
+  z-index: 3;
 }
 .about-me-text {
   color: #2b2b31;
@@ -183,6 +185,30 @@ code {
   to {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+}
+@-webkit-keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(252, 233, 149, 0.4),
+      0 0 0 1em rgba(252, 233, 149, 0.4), 0 0 0 3em rgba(252, 233, 149, 0.4),
+      0 0 0 5em rgba(252, 233, 149, 0.4);
+  }
+  to {
+    box-shadow: 0 0 0 1em rgba(252, 233, 149, 0.4),
+      0 0 0 3em rgba(252, 233, 149, 0.4), 0 0 0 5em rgba(252, 233, 149, 0.4),
+      0 0 0 8em rgba(252, 233, 149, 0);
+  }
+}
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(252, 233, 149, 0.4),
+      0 0 0 1em rgba(252, 233, 149, 0.4), 0 0 0 3em rgba(252, 233, 149, 0.4),
+      0 0 0 5em rgba(252, 233, 149, 0.4);
+  }
+  to {
+    box-shadow: 0 0 0 1em rgba(252, 233, 149, 0.4),
+      0 0 0 3em rgba(252, 233, 149, 0.4), 0 0 0 5em rgba(252, 233, 149, 0.4),
+      0 0 0 8em rgba(252, 233, 149, 0);
   }
 }
 .introduction {
@@ -552,14 +578,6 @@ td {
 }
 .skills-header {
   display: inline-block;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(50%, #ac528e),
-    color-stop(70%),
-    to(#c778ad)
-  );
   background: -webkit-linear-gradient(#ac528e 50%, 70%, #c778ad);
   background: linear-gradient(#ac528e 50%, 70%, #c778ad);
   color: #fff;
@@ -646,14 +664,6 @@ td {
   font-size: 3em;
   color: #fff;
   background-color: #002;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(10%, #3943b7),
-    color-stop(40%),
-    to(#006)
-  );
   background: -webkit-linear-gradient(#3943b7 10%, 40%, #006);
   background: linear-gradient(#3943b7 10%, 40%, #006);
   animation-name: slideInLeft;
@@ -703,120 +713,50 @@ td {
   height: 10%;
 }
 #el1 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#a4036f),
-    to(#a4036f)
-  );
   background: -webkit-linear-gradient(#a4036f, #a4036f);
   background: linear-gradient(#a4036f, #a4036f);
 }
 #el2 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#a4036f),
-    to(#8a1381)
-  );
   background: -webkit-linear-gradient(#a4036f, #8a1381);
   background: linear-gradient(#a4036f, #8a1381);
   top: -1px;
 }
 #el3 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#8a1381),
-    to(#7f1a89)
-  );
   background: -webkit-linear-gradient(#8a1381, #7f1a89);
   background: linear-gradient(#8a1381, #7f1a89);
   top: -2px;
 }
 #el4 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#7f1a89),
-    to(#74208f)
-  );
   background: -webkit-linear-gradient(#7f1a89, #74208f);
   background: linear-gradient(#7f1a89, #74208f);
   top: -3px;
 }
 #el5 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#74208f),
-    to(#662899)
-  );
   background: -webkit-linear-gradient(#74208f, #662899);
   background: linear-gradient(#74208f, #662899);
   top: -4px;
 }
 #el6 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#662899),
-    to(#5d2e9f)
-  );
   background: -webkit-linear-gradient(#662899, #5d2e9f);
   background: linear-gradient(#662899, #5d2e9f);
   top: -5px;
 }
 #el7 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#5d2e9f),
-    to(#5234a6)
-  );
   background: -webkit-linear-gradient(#5d2e9f, #5234a6);
   background: linear-gradient(#5d2e9f, #5234a6);
   top: -6px;
 }
 #el8 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#5234a6),
-    to(#493aac)
-  );
   background: -webkit-linear-gradient(#5234a6, #493aac);
   background: linear-gradient(#5234a6, #493aac);
   top: -7px;
 }
 #el9 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#493aac),
-    to(#403fb2)
-  );
   background: -webkit-linear-gradient(#493aac, #403fb2);
   background: linear-gradient(#493aac, #403fb2);
   top: -8px;
 }
 #el10 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#403fb2),
-    to(#3943b7)
-  );
   background: -webkit-linear-gradient(#403fb2, #3943b7);
   background: linear-gradient(#403fb2, #3943b7);
   top: -9px;
@@ -1013,4 +953,4 @@ code {
     bottom: 10px;
   }
 }
-/*# sourceMappingURL=main.0c54942d.chunk.css.map */
+/*# sourceMappingURL=main.69087ef1.chunk.css.map */
